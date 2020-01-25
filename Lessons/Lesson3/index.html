@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <p class="paragraph">Абзац</p>
+
+    <span class="paragraph">Строчный</span>
+
+    <img src="img/dog.jpeg" width="400" style="float: right;">
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium doloremque officia deleniti saepe repellat placeat voluptatem id. Neque earum recusandae obcaecati quas soluta voluptate eligendi quisquam dolores aspernatur provident!
+        Esse asperiores possimus recusandae nostrum accusantium earum aliquid quasi saepe tempora iure ipsum aut aliquam corrupti ab cupiditate fugit incidunt corporis vitae ea ratione sint, nobis labore mollitia? Ipsum, ullam.
+        Quibusdam culpa molestiae natus, recusandae iure, at incidunt ipsum adipisci dolorem deserunt mollitia cupiditate illo itaque dolor quam fugit officiis veniam earum a tempora modi odio quos quis? Tempore, veniam.
+    </p>
+
+    <div style="clear: both;"></div> <!-- Обнуление float -->
+
+    <h2>Заголовок</h2>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate atque dolorem autem, nemo placeat ullam ab excepturi obcaecati fugiat deleniti. Fugiat asperiores dolor corporis accusantium sunt velit ducimus voluptas quod.
+        Asperiores ea nesciunt nam unde, dolore numquam saepe nulla sequi alias, dignissimos expedita officiis quae, fuga distinctio inventore itaque corporis accusantium eos ratione libero odio architecto ad? Magni, laudantium reiciendis?
+        Ex ratione aliquid ducimus delectus corrupti fugit quaerat accusantium, at eligendi amet ipsa soluta officiis fugiat aut distinctio qui esse? Voluptate natus sit harum perferendis voluptatibus id, dolorum quia sunt!
+        Dolorum error incidunt, non iste sunt, quos aliquid mollitia, ut velit animi fugit itaque nemo minima deleniti sapiente magnam numquam quasi perspiciatis? Corporis nihil quidem minima, dolorum ratione odit mollitia?
+    </p>
+
+    <!-- 1. Плавающие элементы не могут выходить за край своего контейнера-родителя. -->
+
+    <div style="width: 400px;">
+        <div style="width: 200px; float: left;">1</div>
+        <div style="width: 100px; float: right;">2</div>
+        <div style="width: 150px; float: right;">3</div>
+        <div style="width: 50px; float: left;">4</div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <!-- 2. Каждый плавающий элемент будет отображаться справа или ниже от предыдущего при float:left, 
+        либо слева и ниже, при float:right. -->
+
+    <!-- 
+        3. Блок с float:left не может быть правее, чем блок с float:right
+
+        4. Плавающий элемент не может выходить за пределы верхней границы своего контейнера.
+
+        5. Плавающий элемент не может располагаться выше, чем предыдущая строка inline-элементов
+
+        6. Плавающий блок должен быть расположен как можно выше.
+
+
+    -->
+
+    <div>
+        Привет
+        <img>
+        <p></p>
+
+        <p></p>
+        <p>
+            
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus et alias corporis, harum minima perspiciatis dolorum aliquid quisquam blanditiis dolore possimus officiis dolor a, perferendis aperiam exercitationem quasi suscipit quibusdam.
+        
+        </p>
+    </div>
+
+
+    <div id="first">
+        Привет
+    </div>
+
+    <div class="parent">
+        <div class="children">
+            
+        </div>
+    </div>
+
+
+    <style>
+        
+        h2 {
+            color: red;
+            font-weight: 300;
+        }
+
+    
+    </style>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
