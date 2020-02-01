@@ -1,0 +1,266 @@
+.text{
+    white-space: nowrap;
+    /*
+        normal - по-умолчанию. автоперенос строк.
+        nowrap - запрещается перенос строк, весь текст идет в одну строку, но работают переносы
+        тегом br
+        pre - весь текст в этом элементе будет выводится как есть - со всем пробелами, переносами
+        pre-line - текст переносится на новую строку, если не помещается и одновременно сохраняет
+         пробелы
+        pre-wrap - текст переносится на новую строку, если не помещается и одновременно сохраняет
+         пробелы и переносы
+         
+    */
+
+    text-transform: uppercase;
+    /*
+        uppercase - все символы становятся заглавными (буквы)
+        capitalize - первый символ каждого слова в предложении будет заглавным. 
+        lowercase - все символы становятся строчными (буквы)
+        none - значение по умолчанию
+    */
+
+    text-decoration: underline;
+    /*  
+        underline - подчеркивает текст
+        overline - подчеркивает текст сверху (линия сверху)
+        line-through - зачеркнутый текст
+        none - по умолчанию
+
+    */
+
+    text-decoration-color: red; /* Цвет декорации или почеркивания */
+
+    text-decoration-style: wavy;
+    /*
+        solid - прямая линия (по-умолчанию)
+        double - двойная линия
+        dotted - точечная линия
+        dashed - пунктирная линия
+        wavy - волнистая
+    */
+
+
+    /* Свойства шрифтов */
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    /*
+        Семейства шрифтов:
+        Serif - шрифты с засечкой
+        Sans-serif - рубленые шрифты
+        Monospace - моноширные шрифты 
+        Cursive - рукописные шрифты
+        Аллегорические шрифты
+    */
+
+    font-style: italic;
+
+    /*
+        normal - по-умолчанию
+        italic - курсив
+
+    */
+
+    font-size: 20px;
+
+    /*
+        50% - размер будет браться от родительского
+    */
+
+    font-weight: bold;
+
+    /*
+        100 - Thin
+        200 - Semi-Light
+        300 - Light
+        400 - Regular(Normal)
+        500 - Medium
+        600 - Semi-Bold
+        700 - Bold
+        800 - Extra-Bold
+        900 - Black
+    */
+
+    font: bold italic 20px/40px Arial, serif;
+
+
+    color: darkblue; /* Цвет текста */
+
+    overflow: hidden;
+
+    height: 100px;
+
+    text-overflow: ellipsis;
+
+    /*
+        text-overflow будет работать, только если задано свойство overflow
+        clip - текст обрезается по размеру области (по умолчанию)
+        ellipsis - обрезает текст и добавляет в конце многоточие
+
+    */
+
+    word-break: break-all;
+
+    /*
+        normal - слова переносятся по умолчанию, либо там где тег br либо где пробелы
+        break-all - слова будут переноситься, но не по правилам языка. Это свойство не работает для азиатских 
+        языков
+        
+    */
+
+
+}
+
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: green;
+}
+
+a:hover{
+    color: darkcyan;
+}
+
+a:active{
+    color: firebrick;
+}
+
+
+/*
+    Псевдокласс - это класс определенный для элемента по-умолчанию и обычно он обозрачает какое-то его состояние.
+
+    a:link - не посещенная ссылка
+    a:visited - посещенная ссылка
+    a:hover - наведение курсора на ссылку
+    a:active - это состяние нажатия но до отпуска кнопки.
+
+*/
+
+
+.l-gradient{
+    width: 300px;
+    height: 200px;
+
+    background: linear-gradient(45deg, red, purple, blue);
+
+    background: linear-gradient(to top, red 20%, green 50%, blue 80%);
+
+    /*
+        linear-gradient - выводит переход из одного цвета в другой (третий, четвертый....)
+        Принимает любые цвета
+
+        Вместо градусов можно передать задокументированные названия направлений
+        to top - снизу вверх (0deg)
+        to right - с лева на право (90deg)
+        to bottom (180deg)
+        to left (270deg)
+
+        Также направления можно комбинировать
+        to top left - из правого нижнего в верхний левый угол
+
+
+        Также можно указывать с кого момента начнет один цвет переходить в другой
+        (точки остановки градиента)
+
+        background: linear-gradient(to top, red 20%, green 50%, blue 80%);
+
+
+        Отрисовка полос градиентом
+
+
+    */
+
+    background: linear-gradient(to right, red 20%, blue 20%, blue 80%, purple 80%);
+}
+
+
+.r-gradient{
+    width: 300px;
+    height: 200px;
+
+    background: radial-gradient(farthest-side at top, red, blue);
+}
+
+/*
+    background: radial-gradient(форма_градиента \  размер \ позиция центра, первый цвет, второй цвет .... );
+
+    форма градента:
+    ellipse - по-умолчанию
+    сircle - круг
+
+    Поpиция центра по цмолчанию 50% 50% (центр)
+    Есть задокументированные названия позиций, можно комбинировать
+
+    at top
+    at bottom
+    at left
+    at right
+
+    Также позицию можно задать в %, px - отталкиваться в этом случае позмцмя будет от левого верхнего угла
+
+
+    Размеры можно задавать в %, em, px. Передаются они 2 значениями - 1 значение ширина эллипса, 2 высота эллипса.
+
+    Есть также задокументированные названия для размеров
+
+    closest-side - размер градиента будет рассчитан до любой ближайшей стороны.
+
+    farthest-side - размер градиента будет рассчитан до любой дальней стороны
+
+    closest-corner -  размер градиента будет рассчитан до любого ближайшего угла
+
+    farthest-corner -  размер градиента будет рассчитан до любого дальнего угла
+
+*/
+
+
+
+.ball{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 65% 15%, aqua, darkblue);
+}
+
+
+.l-repeat-gradient{
+    height: 300px;
+
+    background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px);
+}
+
+
+.r-repeat-gradient{
+    height: 300px;
+
+    background: repeating-radial-gradient(circle, red, red 10px, blue 10px, blue 20px);
+}
+
+
+/*  Закругление углов */
+
+.rounded{
+    width: 400px;
+    height: 200px;
+    background-color: purple;
+
+    border-radius: 40px/10px;
+}
+
+/*
+    border-radius может принимать px \ % \ em
+
+    Также есть такие варианты записи:
+
+    border-radius: 20px
+                    0 0 20px 20px (начинется от левого верхнего угла и по часовой стрелке)
+                    0 0 20px
+                    10px 20px
+
+                    10px/20px - для всех 2 углов (для создания скошенных углов)
+
+*/
