@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Таблицы 
+    
+    colspan - свойство <tr> и <td> для объединения ячеек в строку (объединение колонок)
+
+    rowspan - свйоство <tr> и <td> для объединения ячеек в столбик (объединение по вертикали)
+    
+    -->
+
+    <table border="3" width="100%" class="products">
+        <caption>Заголовок</caption>
+
+        <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">1/2</td>
+                <td>Апельсин</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000</td>
+            </tr>
+
+            <tr>
+                <td>Груша</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Мандарин</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Слива</td>
+                <td>100</td>
+                <td rowspan="2" colspan="2">10</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Ананас</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">ИТОГО</td>
+                <td>5000</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+    <!-- Рамки (border) -->
+    
+    <div class="box">Привет</div>
+
+    <div class="box2">Привет2</div>
+
+    <div class="box3">Привет3</div>
+
+    <!-- Тени для блоков -->
+
+    <div class="box-shadow">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae magni aliquid illum consequatur ut sapiente maxime exercitationem cum beatae ipsam. Praesentium perspiciatis quia sint nisi soluta sunt reprehenderit voluptate atque!
+    </div>
+
+
+    <!-- Ширина \ высота -->
+
+    <div class="size"></div>
+
+
+    <a href="javascript:void(0);" class="button">Нажми меня</a>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,191 @@
+.products {
+    border: 1px solid #000;
+
+    border-collapse: collapse; /* отключает расстояние между ячейками */
+
+    /*border-spacing: 10px;*/
+
+    width: 600px;
+    
+
+}
+
+.products caption{
+    caption-side: bottom; /* Меняет расположение заголовка */
+}
+
+.products tbody tr:first-child td:first-child {
+    border-right: 0;
+}
+
+.products tbody tr:first-child td:nth-child(2),
+.products tbody tr:nth-child(2) td:first-child {
+    border-left: 0;
+}
+
+.products tr td:last-child{
+    border-right: 0;
+}
+
+.products{
+    border: 0;
+}
+
+.products td, .products th{
+    border: 1px solid #000;
+    height: 40px;
+    vertical-align: top;
+    /*
+        vertical-align - меняет расположение текста в ячейке по вертикали. 
+        Принимает значения: top \ bottom \ middle
+        По умолчанию middle
+    */
+}
+
+
+/* Рамки */
+
+.box{
+    width: 400px;
+    height: 300px;
+    background-color: purple;
+
+    border: 4px solid red;
+
+    border-width: 10px; /* толщина рамки */
+    border-style: groove;
+    border-color: blue;
+
+
+}
+
+
+.box2{
+    width: 400px;
+    height: 300px;
+    background-color: purple;
+
+    border-right-width: 4px;
+    border-left-width: 5px;
+    border-top-width: 6px;
+    border-bottom-width: 7px;
+
+    border-right-style: dotted;
+    border-left-style: dashed;
+    border-top-style: solid;
+    border-bottom-style: double;
+
+    border-right-color: green;
+    border-left-color: blue;
+    border-top-color: yellow;
+    border-bottom-color: black;
+}
+
+.box3{
+    width: 400px;
+    height: 300px;
+    background-color: purple;
+
+    /* Параметры задаются для 4 сторон начиная с верхней и по часовой стрелке*/
+    border-width: 6px 7px 8px 9px;
+    border-style: solid dashed dotted double;
+    border-color: black green blue firebrick;
+
+}
+
+
+/* Тени для блоков */
+
+.box-shadow{
+    width: 300px;
+    height: 300px;
+    background: tomato;
+
+    -webkit-box-shadow: 8px 5px 16px 0px rgba(0, 184, 28, 1);
+    -moz-box-shadow:    8px 5px 16px 0px rgba(0, 184, 28, 1);
+    box-shadow:         8px 5px 16px 0px rgba(0, 184, 28, 1);
+
+    /*
+        box-shadow: смещение_по_ширине смещение_по_высоте радиус_размытия растяжение цвет;
+
+        параметр inset добавляется в начале параметров тени и включает отображение тени внутри объекта.
+
+        Также есть возможность задавать сразу 2 тени одновременно через запятую, но одна из низ должна быть
+        inset, а вторая обычная
+
+        box-shadow: 8px 5px 16px 0px rgba(0, 184, 28, 1), inset 8px 5px 16px 0px rgba(0, 184, 28, 1);
+    */
+
+
+    /* Тень для текста */
+
+    text-shadow: 0px 0px 10px rgba(0, 14, 198, 1);
+
+    /*
+        text-shadow: смещение_по_горизонтали смещение_по_вертикали радиус_размытия цвет
+    */
+}
+
+.size{
+    background: red;
+    height: 200px;
+
+    max-width: 700px; /* ширина блока не может быть больше 700px */
+    min-width: 400px; /* ширина блока не может быть меньше 400px */
+
+    min-height: 400px; /* Не может быть меньше чем 400px в высоту */
+    max-height: 700px; /* Не может быть больше чем 700px в высоту */
+
+}
+
+/*
+    transparent - прозрачный цвет
+*/
+
+
+
+.button {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: #333;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 50px;
+
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    margin: 20px auto;
+    text-shadow: 1px 1px 0px #a7a7a7;
+
+    border-bottom: 5px solid #a7a7a7;
+}
+
+.button:active{
+    border-bottom: 0;
+    top: 5px;
+    opacity: .8;
+}
+
+.button::before{
+    content: '\2764';
+    color: red;
+    line-height: 1;
+
+    position: absolute;
+    left: 8px;
+    top: 8px;
+
+    transform: rotate(-45deg);
+}
+
+.button:active::before{
+    color: #a7a7a7;
+}
