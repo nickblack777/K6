@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic');
+
+@font-face {
+    font-family: 'bancodiregular';
+    src: url('fonts/19036-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap; /* Заставляет шрифт грузиться асинхронно, сначала подгружается шрифт имеющийся на устройстве
+    похожий на используемый и когда закончится загрузка файла шриафта, то он начнет работать */
+}
+
+/*
+Regular 400
+    @font-face {
+        font-family: 'bancodi';
+        src: url('bancodi-400.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+Bold 700
+    @font-face {
+        font-family: 'bancodi';
+        src: url('bancodi-700.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+Light 300    
+    @font-face {
+        font-family: 'bancodi';
+        src: url('bancodi-300.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+*/
+
+
+body{
+    font-family: 'bancodiregular';
+    font-weight: 900;
+    font-size: 60px;
+}
+
+/* Псевдокласс - обращение по языку */
+div:lang(en){
+    color: red;
+}
+
+div:lang(ru){
+    color: purple;
+}
+
+/* Псевдокласс - обращение, если элемент не имеет указанного селектора (класс \ id \ название ) */
+
+.lang:not(.rus){
+    border-bottom: 1px solid #000;
+}
+
+/* Псевдоселектор :nth-child() 
+    Принимает либо задокументированные знаяние odd(не четные) \ even(четные), либо формулу которая будет выделять 
+    нужные элементы в ряду. ( Например: 3n - каждый третий элемент)
+*/
+
+.list li:nth-child(even){ /* even = 2n */
+    color: blue;
+}
+
+.list li:nth-child(odd){ /* odd = 2n - 1 */
+    color: red;
+}
+
+.list li:nth-child(3n){
+    text-decoration: underline;
+}
+
+.list li:nth-child(3n+2){ /* Каждый третий, начиная со 2 */
+
+}
+
+.list li:nth-child(n+4){ /* Все элементы, начиная с 4 */
+
+}
+
+.list li:nth-child(3){ /* Выделить 3 элемент */
+
+}
+
+/*
+    Есть также аналогичная функция nth-last-child() - делает тоже самое только с конца
+*/
+
+.boxes div:nth-child(odd){
+    color:purple;
+}
+/*
+    При nth-child происходит выделение элементов строго по типу, но в ряду элементов не пропускаются
+    другие типы.
+*/
+
+/*
+    Псевдо класс :nth-of-type() - работает также как nth-child, но не учитывает другие типы и в выделяем диапазоне
+    другие типы просто выпадают.
+*/
+
+.boxes div:nth-of-type(odd){
+    color: green;
+}
+
+/*
+    Псевдо класс :first-child - выделяет 1 элемент в ряду
+                 :last-child - выделяет последний элемент в ряду
+                 :only-child - выделяет элемент если у него нет сестринских элементов
+
+*/
+
+.boxes h1:only-child{ /* Не сработало, потому-что h1 должен быть едиственным потомком .boxes */
+    color: fuchsia;
+}
+
+/*
+    Псевдо класс :empty - выделяет эелемнт у которого в нутри нет ничего, даже 1 символа.
+*/
+
+.boxes div:empty{
+    height: 20px;
+    background: fuchsia;
+}
+
+/*
+    Псевдо класс :first-of-type - работает также как first-child, но учитывает тип элемента.
+
+    div
+    h1
+    div
+    span
+    h1
+
+    h1:first-child
+
+    :last-of-type - то же самое, только выделится последний элемент в ряду
+
+    :nth-last-of-type() - работает также как :nth-last-child() но учитывает тип элемента.
+
+    :only-of-type - выделит единственный элемент указанного типа среди дочерних.
+
+*/
+
+
+.boxes h1:only-of-type{ /* Сработало, потому-что only-of-type учитывает тип элемента */
+    color: fuchsia;
+}
+
+
+
+/* Псевдо-элементы */
+
+/*
+    ::first-letter - выделяет 1 букву в тексте элемента. Применяется только к блочным элементам!!!
+*/
+
+.boxes h1::first-letter{
+    font-size: 140px;
+    color: goldenrod;
+}
+
+/*
+    ::first-line - работает также как first-letter только для строки. Применяется только к блочным элементам!!!
+*/
+
+
+/*
+    ::before \ ::after
+    Псевдо-элементы, которые добавлют контент в начало (before) или конец (after) внутри указанного элемента.
+
+    Обязательным свойство этих элементов является свойство content. Его нужно объявить хотябы с пустыми кавычками!!
+
+    В content можно также передавать url() (изображения)
+    content: url('img/google.png');
+
+    По умолчанию before\after являются display: inline и если нужно поменять их состояние, то нужно менять явно.
+
+
+*/
+
+.text::before{
+    content: 'ДО';
+}
+
+.text::after{
+    content: 'ПОСЛЕ';
+}
+
+
+/*
+    wrapper - ограничитель ширины контента (распорка)
+
+    <div class="wrapper"></div>
+
+    .wrapper{
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+
+    <header>
+        <div class="wrapper">
+        
+        </div>
+    </header>
+*/
+
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content{
+    background: purple;
+}
+
