@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic');
+
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #44464f;
+}
+
+*::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper{
+    max-width: 1262px;
+    margin: 0 auto;
+}
+
+#header{
+    padding: 15px 0 11px;
+}
+
+.header-logo{
+    float: left;
+    margin-right: 94px;
+}
+
+.header-address{
+    float: left;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    padding-left: 30px;
+    margin-top: 25px;
+    margin-right: 97px;
+    background: url(img/map-i.png) no-repeat top left;
+}
+
+.header-contacts {
+    float: left;
+    margin-top: 25px;   
+}
+
+.header-contacts_phone {
+    display: block;
+    font-size: 24px;
+    color: #44464f;
+    text-decoration: none;
+    padding-left: 30px;
+    margin-bottom: 3px;
+    background: url(img/phone-i.png) no-repeat left center;
+}
+
+.header-contacts_email {
+    display: block;
+    font-size: 16px;
+    color: #86c043;
+    padding-left: 30px;
+    background: url(img/mail-i.png) no-repeat left center;
+    line-height: 28px;
+}
