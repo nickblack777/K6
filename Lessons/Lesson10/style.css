@@ -17,6 +17,11 @@ body {
     clear: both;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+}
+
 .wrapper{
     max-width: 1262px;
     margin: 0 auto;
@@ -175,7 +180,121 @@ body {
 }
 
 .header-search input[type="submit"]:hover{
-    background-color: crimson;
+    background-color: fuchsia;
 }
 
 
+.home-slide_item{
+    height: 500px;
+    padding-top: 133px;
+    padding-left: 264px;
+
+    background: url(img/slide.jpg) no-repeat center center;
+}
+
+.home-slide_item_title{
+    margin: 0;
+    color: #86c043;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 60px;
+    text-shadow: 0.515px 0.857px 0px rgba(68, 70, 79, 1);
+    text-transform: uppercase;
+}
+
+.home-slide_item_descr{
+    color: #44464f;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 50px;
+    margin: 0;
+}
+
+.home-articles{
+    margin-bottom: 60px;
+}
+  
+.home-articles_title{
+    margin: 43px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #86c043;
+    font-size: 48px;
+    font-weight: 500;
+    text-shadow: 0.515px 0.857px 0px rgba(68, 70, 79, 0.5);
+    line-height: 1.25;
+}
+
+.home-articles_item{
+    width: calc( (100% - 54px) / 3 );
+    float: left;
+    margin-right: 27px;
+    background-color: #f5f6f8;
+    border-radius: 4px;
+}
+
+.home-articles_item:nth-child(3n){
+    margin-right: 0;
+}
+
+.home-articles_item_image,
+.home-articles_item_image img{
+    display: block;
+    border-radius: 4px;
+}
+
+.home-articles_item_bottom{
+    padding: 20px;
+    min-height: 260px; 
+
+    box-shadow: 0px 1px 3px 0px rgba(88, 88, 88, 0.25);
+}
+
+.home-articles_item_title{
+    margin: 0 0 10px 0;
+}
+
+.home-articles_item_title a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #86c043;
+    line-height: 1.2;
+}
+
+.home-articles_item_text{
+    line-height: 1.2;
+}
+
+#footer{
+    padding: 30px 0 50px;
+    background-color: #689434;
+}
+  
+.footer-copyright{
+    width: 320px;
+    float: left;
+    margin-right: 90px;
+}
+
+.footer-copyright img{
+    margin-bottom: 17px;
+}
+
+.footer-copyright_text{
+    color: #fff;
+    font-weight: 300;
+}
+
+.footer-col{
+    float: left;
+}
+
+.footer-col_menu{
+    min-width: 255px;
+}
+
+.footer-col_contacts{
+    float: right;
+    min-width: 300px;
+}
