@@ -298,3 +298,118 @@ img{
     float: right;
     min-width: 300px;
 }
+
+.footer-col_title{
+    color: #ffd307;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-col.center .footer-col_title{
+    text-align: center;
+}
+
+.footer-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li a{
+    display: block;
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-news_item_image{
+    display: block;
+    float: left;
+    margin-right: 18px;
+
+    box-shadow: 0.515px 0.857px 0px 0px rgba(68, 70, 79, 0.51);
+}
+
+.footer-news_item{
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+  
+.footer-news_item_title{
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 5px;
+
+    width: calc(100% - 103px);
+}
+
+.footer-news_item_title a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-news_item_date{
+    float: left;
+
+    font-weight: 700;
+}
+
+.footer-address{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+
+    padding-left: 33px;
+    margin-bottom: 20px;
+
+    background-image: url(img/map-i.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.footer-phone{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+
+    padding-left: 33px;
+    margin-bottom: 20px;
+
+    background-image: url(img/phone-i.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.footer-mail{
+    display: block;
+    color: #ffd307;
+    font-size: 16px;
+
+    padding-left: 33px;
+    margin-bottom: 20px;
+
+    background-image: url(img/mail-i.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.footer-worktime{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+
+    padding-left: 33px;
+    
+    background-image: url(img/clock-i.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
