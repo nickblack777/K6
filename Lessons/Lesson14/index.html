@@ -66,7 +66,7 @@
         получение какого-либо ответа сервера. В процессе отправки формируется строка
         с введенными данными в форму.
 
-        post - отрпавляет данные в зашифрованном виде (например используется для 
+        post - отправляет данные в зашифрованном виде (например используется для 
         логина пользователя на сайт)
 
         name="произвольное_имя"
@@ -94,10 +94,10 @@
 
     -->
 
-    <form>
+    <form id="form" method="POST">
         <!-- Типы полей (input) -->
 
-        <input type="file" accept=".jpg, audio/*"> <br>
+        <input type="file" accept=".jpg, audio/*" multiple> <br>
 
         <!--
             accept="типы_файлов"
@@ -111,23 +111,222 @@
 
         -->
 
-        <input type="text"> <br>
+        <input type="text" placeholder="Введите имя" name="firstname"> <br>
 
-        <input type="number"> <br>
+        <input type="number" min="0" step="5" autofocus name="age"> <br>
 
         <input type="range"> <br>
 
-        <input type="date"> <br>
+        <input type="date" min="2019-02-22"> <br>
 
         <input type="datetime-local"> <br>
 
-        
+        <input type="month"> <br>
 
-        
+        <input type="time"> <br>
+
+        <input type="week"> <br>
+
+        <input type="search"> <br>
+
+        <input type="tel"> <br>
+
+        <input type="url" readonly value="Привет"> <br>
+
+        <input type="email" value="text@test" disabled> <br>
+
+        <input type="color"> <br>
+
+        <input type="hidden"> <br>
+
+        <input type="password" required> <br>
+
+        <input type="reset"> <br>
+
+        <input type="submit"> <br>
+
+        <input type="image" src="google.png"> <br>
+
+        <button>Send</button> <br>
+
+        <textarea cols="15" rows="10" maxlength="50"></textarea>
 
 
 
     </form>
+
+    <!--
+        Атрибуты для textarea
+
+        cols="10" - кол-во колонок исходя из ширины символа
+        rows="10" - количество строк
+        maxlength="100" - максимальное кол-во символов
+        wrap="hard"
+            hard - при отправке на сервер в тексте будут сохранены все переносы и пробелы
+            (работает только в связке с атрибутом cols)
+            soft - переносы не будут сохранены, будут переданы как пробелы
+
+        
+        Атрибуты для text/search/tel/url/email/password
+
+        size="20" (лучше использовать css width)
+
+
+        Атрибуты для file \ email
+
+        multiple - позволяет выбрать сразу несколько файлов\почт через запятую
+
+
+
+        Атрибуты для полей range \ number \ даты
+
+        min="0" - задает минимальное значение для числа
+        min="2019-02-22"
+
+        max="10"
+
+        step="5"
+
+
+        Атрибуты для image
+
+        alt="Изображение" - описание картинки
+        width\height - ширина\высота
+        src - путь к файлу картинки
+
+
+        Атрибуты для текстовых полей
+        autocomplete="on"
+                    on\off
+
+        readonly - запрещает менять значение поля, но позволяет  скопировать или выделить 
+        текст внутри
+        placeholder="текст" - задает текст, который будет виден пользователю до ввода
+        данных в поле
+
+        pattern="регулярные_выражения"  - оно проверяет на правильность ввода данные
+
+
+        Атрибуты для всех полей
+
+        autofocus - позволяет сфокусировать курсор на элементе при загрузке страницы
+
+        disabled - делает поле не активным
+
+        form - используется для привязке поля к форме, если оно находится за пределами формы
+        (принимает id формы)
+
+        required - делает поле обязательным для заполнения
+
+        name="произвольное_имя" - обязательный атрибут поля при отправке на сервер,
+        если его не указать данные не придут на сервер. 
+
+
+        value="значение"
+        Для submit\clear меняет текст кнопки
+        Для текстовых полей - записывает значение по-умолчанию
+        Для других элементов это просто хранение значения по умолчанию в  формате 
+        данного элемента.
+    -->
+
+
+    <form>
+
+        <select name="option" multiple size="10">
+            <option value="point1">Пункт 1</option>
+            <option>Пункт 2</option>
+            <option selected>Пункт 3</option>
+            <option label="П1">Пункт 4</option>
+            <option disabled>Пункт 5</option>
+
+            <optgroup label="Подпункты">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </optgroup>
+        </select>
+
+        <input type="submit">
+
+    </form>
+
+    <!--
+        Атрибуты для select
+
+        autofocus
+        disabled
+        form
+        name
+        required
+
+        multiple - переключает список в режим множественного выбора
+        size="10" - работает только в связке с multiple и ограничивает количество одновременно
+        показанных пользователю пунктов.
+
+
+        Атрибуты для option
+        disabled - запрещает выбор этого пункта
+        label="краткое_название"
+
+        selected - делает пункт выделеннм при загрузке по-умолчанию
+        value="значение" - значение value будет отправлено на сервер, вместо текста, 
+        если оно указано
+
+
+        Атрибуты для optgroup
+
+        disabled - позволяет отключить сразу целую группу опций
+
+        label="Заголовок"
+
+
+    -->
     
+    <form>
+
+        <label>
+            <input type="checkbox">
+            
+            <span>Картошечка</span>
+        </label>
+
+        <label>
+            <input type="checkbox" checked="checked">
+            <span>Курочка</span>
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span>Помидорчик</span>
+        </label>
+
+        <div>
+
+            <label>
+                Кетчуа
+                <input type="radio" name="sauce">
+            </label>
+
+            <label>
+                Сацебели
+                <input type="radio" name="sauce">
+            </label>
+
+            <label>
+                Карри
+                <input type="radio" name="sauce">
+            </label>
+
+        </div>
+
+    </form>
+
+    <!--
+        Атрибуты для checkbox и radio
+
+        checked="checked"
+    -->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
