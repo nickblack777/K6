@@ -1,0 +1,162 @@
+@media screen and (max-width: 1220px) {
+    .header-logo{
+        max-width: 180px;
+        margin-right: 40px;
+        margin-top: 20px;
+    }
+
+    .header-address{
+        margin-right: 40px;
+    }
+
+    .header-bottom_menu ul li a{
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .footer-copyright{
+        margin-right: 40px;
+    }
+
+    .footer-col_menu{
+        min-width: 200px;
+    }
+
+    .footer-col_contacts{
+        min-width: 220px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .header-logo{
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .header-logo img{
+        display: inline-block;
+    }
+
+    .header-bottom_menu{
+        float: none;
+        text-align: center;
+    }
+
+    .header-bottom_menu ul{
+        display: inline-block;
+    }
+
+    .header-search{
+        float: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-slide_item{
+        height: 300px;
+        background-size: cover;
+        padding: 70px 0 0 0;
+        text-align: center;
+    }
+
+    .home-slide_item_title{
+        font-size: 30px;
+        line-height: 1.6;
+    }
+
+    .home-slide_item_descr{
+        font-size: 24px;
+        line-height: 1.6;
+        color: #fff;
+        background-color: rgba(0,0,0,.4);
+    }
+
+    .home-articles_title{
+        font-size: 36px;
+    }
+
+    #footer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-copyright{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-copyright img{
+        margin: 0 auto 15px;
+    }
+
+    /*#footer .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }*/
+
+}
+
+
+@media screen and (max-width: 420px) {
+    .header-logo, .header-contacts{
+        float: none;
+    }
+
+    .header-logo img{
+        max-width: 60%;
+    }
+
+    .header-bottom_menu{
+        display: none;
+    }
+
+    .header-address{
+        margin-right: 0;
+        float: none;
+    }
+
+    #header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-price{
+        float: none;
+        margin: 15px auto 0;
+    }
+
+    .home-slide_item_descr{
+        font-size: 20px;
+    }
+    
+    .home-articles_item{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .footer-col_menu {
+        max-width: none;
+    }
+
+    .footer-col{
+        float: none;
+    }
+
+    .footer-copyright{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-col_title, .footer-menu ul li a{
+        text-align: center;
+    }
+
+
+}
+
