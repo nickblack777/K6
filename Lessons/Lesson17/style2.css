@@ -1,0 +1,12 @@
+.box p {
+  font-size: 20px;
+}
+
+.box p b {
+  color: blue;
+}
+
+.box p:after {
+  content: '123';
+}
+/*# sourceMappingURL=style2.css.map */

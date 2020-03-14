@@ -1,0 +1,230 @@
+.man{
+    width: 120px;
+    height: 200px;
+    background-image: url(sprite.jpg);
+    background-repeat: no-repeat;
+    background-position: -60px -40px;
+}
+
+.box{
+    width: 200px;
+    height: 100px;
+    background: olive;
+
+    /* Переходы (transition) */
+
+    transition-property: width;
+    transition-duration: 1s;
+
+    transition-timing-function: cubic-bezier(.57,.42,.8,.65);
+
+    transition-delay: 1s;
+
+    /*
+        transition-property - принимает название свойства на которое влияет переход
+        По умолчанию - all (все свойства)
+        none - отключает все свойства
+        имя_свойства - будет работать только для этого свойства
+
+        transition-duration - время выполнения перехода
+        принимает s \ ms
+
+        transition-timing-function - принимает функцию, которая отвечает за анимацию скорости
+        перехода
+        По-умолчанию - ease
+        Можно передать любую функцию cubic-bizier
+
+        transition-delay - задержка перед выполнением перехода
+        принимает s \ ms
+
+        Краткая запись перехода
+        transition: property duration timing-function delay;
+
+        Переход для нескольких свойств одновременно можно пределать через запятую в 
+        краткую запись, либо через запятую для каждого подробного свойства
+
+        transition: width 1s, height 3s, color 2s;
+
+        transition-property: width, height, color;
+        transition-duration: 1s, 3s, 2s;
+
+    */
+
+}
+
+.box:hover{
+    width: 500px;
+}
+
+
+/* Трансформация (transform) */
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background: peru;
+}
+
+.box2:hover{
+    /* Сдвиг элемента */
+
+    transform: translate(40px, -50px);
+
+    /*
+        translateX(40px);
+        translateY(60px);
+    */
+
+    /* Искажение (skew) */
+
+    transform: skew(20deg, 20deg);
+    /*
+        scewX()
+        scewY()
+    */
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background: purple;
+}
+
+.box3:hover{
+    /* Масштабирование */
+
+    transform: scale(-1, -1);
+
+    /*
+        Принимает значения от 0 до 1 - уменьшение относительно 100%
+        Больше 1 - это увеличение
+        Отрицательная 1 отзеркалит объект
+
+        scaleX()
+        scaleY()
+    */
+}
+
+.box4{
+    width: 100px;
+    height: 100px;
+    background: green;
+
+    transition: transform 2s;
+  
+    transform-origin: 70% 30%;
+    /*
+        меняет координаты оси. 
+        принимает - px \ % \ top,left,right,bottom
+    */
+}
+
+
+.box4:hover{
+    /* Поворот */
+
+    transform: rotate(360deg);
+}
+
+.box5{
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+
+    animation: shadow 4s infinite ease-in-out;
+    animation-direction: alternate;
+
+    animation: trash 8s infinite ease-in-out;
+}
+
+.box5:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes shadow{
+    0% {
+        text-shadow: 0 0 3px black;
+        left: 0;
+    }
+
+    100%{
+        text-shadow: 0 0 30px black;
+        left: 300px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trash{
+    0%{
+        left: 0;
+    }
+
+    37.5% {
+        left: 400px;
+    }
+
+    62.5% {
+        left: 400px;
+        top: 0;
+    }
+
+    87.5%{
+        left: 400px;
+        top: 200px;
+        transform: rotate(360deg);
+    }
+
+    100%{
+        left: 400px;
+        top: 200px;
+        transform: scale(2, 2);
+    }
+}
+
+
+/*
+    Задокументированные названия начала и конца анимации
+
+    from - начало (0%)
+    to - конец (100%)
+
+
+    animation-name: произвольное_имя;
+    Принимает произвольное имя
+    Значение none отключает анимацию
+
+    animation-duration - время выполнения анимации в s \ ms
+
+    animation-timing-function - принимает функцию cubic-bizier
+
+    animation-itration-count - количество итераций анимации. (количество воспроизведений)
+    Если задать infinite то анимация будет бесконечной.
+
+    animation-direction - направление анимации
+    normal(по-умолчанию)
+    reverse - все повторы анимации воспроизводятся в обратном направлении.
+    alternate - каждый нечетный повтор анимации воспроизводится в нормальном направлении, а
+    четные в обратном
+    alternate-reverse - то же самое что alternate но наоборот
+
+    
+    animation-play-state - определяет будет ли анимация остановлена или запущена.
+    По-умолчанию - running
+    paused - остановка анимации
+
+
+    animation-delay - задержка перед началом анимации в s \ ms
+
+    Краткая запись анимации
+
+    animation: name duration timing-function delay iteration-count direction;
+
+
+    Множественная анимация
+
+    Анимации можно передать через запятую и они будут воспроизводиться одновременно.
+
+
+*/
+

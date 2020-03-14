@@ -1,0 +1,31 @@
+header{
+    background-color: green;
+    grid-area: head;
+}
+
+footer{
+    background-color: hotpink;
+    grid-area: foot;
+}
+
+aside{
+    background-color: indigo;
+    grid-area: sidebar;
+}
+
+main{
+    background-color: lightgreen;
+    grid-area: content;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    grid-template-rows: 50px minmax( calc(100vh - 100px), 1fr ) 50px;
+
+    grid-template-areas: "head head"
+                        "sidebar content"
+                        "foot foot"
+    ;
+}

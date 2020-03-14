@@ -1,0 +1,12 @@
+.box {
+    p{
+        font-size: 20px;
+
+        b{
+            color: blue;
+        }
+        &:after{
+            content: '123';
+        }
+    }
+}
